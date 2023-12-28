@@ -23,3 +23,4 @@ for OUT_DIR_TEMP in "${OUT_DIRS[@]}"; do
 
 done
 
+# git test line
