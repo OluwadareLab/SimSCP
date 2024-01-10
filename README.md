@@ -23,7 +23,6 @@
 - F1 : linear combination of precision and recall
 
 ## COMPUTE QUEUE:
-- compute NMI for chop-k results
 
 ## NOTES: 
 - cite UMAP and leiden algorithm + give more explanation on generation
