@@ -40,14 +40,6 @@ def chunk(data):
         chunks += [seq[i:i + 510] for i in range(0, len(seq), 510)]
     return {"sequence": chunks}
 
-
-# logs callback information during pre-training and performs early stopping
-def callbacks(score, epoch, steps):
-    # save information in logger 
-    logger.info("Score")
-    logger.info({'score':score, 'epoch':epoch, 'steps':steps})
-    return None
-
 # wraps huggingface dataset in Sentence Transformer compatible class 
 class InputDataset:
     def __init__(self,seq):
@@ -58,6 +50,15 @@ class InputDataset:
     
     def __getitem__(self, idx):
         return InputExample(texts=(self.seq[idx],self.seq[idx]))
+
+'''
+# logs callback information during pre-training and performs early stopping
+def callbacks(score, epoch, steps):
+    # save information in logger 
+    logger.info("Score")
+    logger.info({'score':score, 'epoch':epoch, 'steps':steps})
+    return None
+'''
 
 # logs callback information during pre-training
 def callbacks(score, epoch, steps):

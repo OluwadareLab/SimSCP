@@ -2,7 +2,7 @@
 # Recreates SpliceBERT Results and Runs Small Scale SimCSP
 
 ## TODO: 
-- benchmark both and record results 
+- rebuild pre-train to handle mulitple loss functions
 - reproduce NMI results on labelled movie reviews dataset 
 - get SCCS and NMI SpliceBERT 
 
@@ -23,7 +23,6 @@
 - F1 : linear combination of precision and recall
 
 ## COMPUTE QUEUE:
-- compute NMI for chop-k results
 
 ## NOTES: 
 - cite UMAP and leiden algorithm + give more explanation on generation
@@ -51,7 +50,7 @@
 __(character)__ needed _____ because _____ but _____ so _____  finally ____
 
 ## IDEAS: 
-- train models with frozen classiier layers to evaluate the quality of the embeddings (inspect quality of pre-trained embeddings)
+- train models with frozen classifier layers to evaluate the quality of the embeddings (inspect quality of pre-trained embeddings)
 - use a MLM and CL loss function together during pre-train (multiple loss functions)
 - use a splice site location tool to generate a better MLM training set w/ sup. simCSP (synthetic data and sup. CL)
 - look for papers that used CL to improve performance on the SUBJ dataset (b/c it is a binary classification task)
